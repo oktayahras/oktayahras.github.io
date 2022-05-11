@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>castro cafe</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+
+        .category{
+            float: left;
+            
+        }
+        .category > ul > li{
+            display: inline-block;
+            padding: 10px;
+        }
+        .category > ul > li >a{
+            text-decoration: none;
+            font-weight: bold;
+            color: black;
+            list-style-type: none;
+        }
+        .category > ul > li >a:hover{
+            color: orange;
+        }
+        .logo{
+            float: left;
+        }
+        .logo > img {
+            width: 100px;
+            height: auto;
+            max-width: 100px;
+        }
+
+    </style>
+</head>
+<body>
+   <div class="container-fluid mt-2">
+       <div class="row" style="height: 100px;">            
+
+        <div class="col-md-4 col-lg-4 col-sm-4 ">
+            <div class="logo " style="margin-left: 5%;">
+                <img src="img/downloadI.jpg" alt="">
+            </div>
+        </div>
+           
+        </div>
+        </div>
+
+    
+<div class="container mt-5">
+  
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="img/download.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/downloadI.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/downloadı.jpg" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+              <br>
+              <h1 style="text-align: center;"><b>LİSTELER VE KARTLAR</b></h1>
+
+            </div>
+
+            <div class="container">
+               
+                <div class="col-md-5 col-sm-5 col-lg-5" >
+                    <h4>TEMEL LİSTELER</h4>
+                    <p>En temel liste grubu, liste öğelerini içeren sırasız bir listedir.</p>
+                    <img src="1.1.PNG">                    
+                    <ul style="margin-top: 15px;" class="list-group">
+                        <li class="list-group-item">bir</li>
+                        <li class="list-group-item">iki</li>
+                        <li class="list-group-item">üç</li>
+                        <li class="list-group-item">dört</li>
+                        <li class="list-group-item">beş</li>
+                      </ul>
+                </div>
+                <br>
+                <div class="col-md-5 col-sm-5 col-lg-5" >
+                    <h4> Aktif Durum </h4>
+                    <p>'active' Geçerli öğeyi vurgulamak için sınıfı kullanın</p>
+                    <img src="2.2.PNG">
+                    <ul class="list-group">
+                        <li class="list-group-item active">bir</li>
+                        <li class="list-group-item">iki</li>
+                        <li class="list-group-item">üç</li>
+                        <li class="list-group-item">dört</li>
+                        <li class="list-group-item">beş</li>
+                      </ul>
+                </div>
+                <br>
+                <h4>Bağlantılı Öğeleri Olan Liste Grubu</h4>
+                <p>Bağlantılı öğeler içeren bir liste grubu oluşturmak için div yerine  ul ve  a yerine kullanın li,isteğe bağlı olarak List-group-item-actionfareyle üzerine gelindiğinde gri bir arka plan rengi istiyorsanız sınıfı eklenebilir.</p>
+                <img src="3.3.PNG" >
+                <div class="list-group">
+                  <a href="#" class="list-group-item list-group-item-action">ilk link</a>
+                  <a href="#" class="list-group-item list-group-item-action">ikinçi link</a>
+                 <a href="#" class="list-group-item list-group-item-action">üçüncü link</a>
+                </div>
+                
+               <h4> Devre Dışı Öğeli Liste Grubu</h4>
+               <img src="4.4.PNG" >
+               <p>Devre dışı bırakılan sınıf, devre dışı bırakılan öğeye daha açık bir metin rengi ekler. Bağlantılarda kullanılırsa, varsayılan vurgulu efekti kaldıracaktır</p>
+               <div class="list-group">
+               <a href="#" class="list-group-item disabled">Devre dışı bırakılmış ilk öge</a>
+               <a href="#" class="list-group-item disabled">Devre dışı bırakılmış ikinçi öğe</a>
+               <a href="#" class="list-group-item">üçüncü</a>
+               </div>
+                <br>
+                <h4> Kenarları Temizle / Kaldır</h4>
+                <img src="5.5.PNG" >
+                <p> Bazı kenarlıkları ve yuvarlatılmış köşeleri kaldırmak için .list-group-flush sınıfını kullanın</p>
+               <div class="container">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">ilk</li>
+                  <li class="list-group-item">ikinci</li>
+                  <li class="list-group-item">ücüncü</li>
+                  <li class="list-group-item">dörtüncü</li>
+                </ul>
+              </div>
+              <br>
+              <div class="container">
+                <h4> Yatay Liste Grupları</h4>
+                <img src="6.6.PNG" >
+                <p>list-group-horizontal sınıfı, liste öğelerini dikey yerine yatay olarak görüntüler </p>
+                <ul class="list-group list-group-horizontal">
+                  <li class="list-group-item">ilk</li>
+                  <li class="list-group-item">ikinci</li>
+                  <li class="list-group-item">üçüncü</li>
+                  <li class="list-group-item">dörtüncü</li>
+                </ul>
+              </div>
+              <br>
+              <div class="container">
+                <h4>Bağlamsal Sınıflarla Liste Grubu </h4>
+                <img src="7.7.PNG">
+                <p> listeye renk vermek için</p>
+                <ul class="list-group">
+                  <li class="list-group-item list-group-item-success">başarılı</li>
+                  <li class="list-group-item list-group-item-secondary">ikincil</li>
+                  <li class="list-group-item list-group-item-info">bilgi</li>
+                  <li class="list-group-item list-group-item-warning">uyarı</li>
+                  <li class="list-group-item list-group-item-danger">Tehlike</li>
+                  <li class="list-group-item list-group-item-primary">Birincil</li>
+                  <li class="list-group-item list-group-item-dark">karanlık</li>
+                  <li class="list-group-item list-group-item-light">hafif</li>
+                </ul>
+              </div>
+              <br>
+              <div class="container mt-3">
+                <h4> Rozetli Liste Grubu</h4>
+                <p>'badge' Liste grubuna rozet eklemek için sınıfları yardımcı/yardımcı sınıflarla birleştirin </p>
+                <img src="8.8.PNG">
+                <ul class="list-group">
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Gelen kutusu
+                    <span class="badge badge-primary badge-pill">20</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Reklamlar
+                    <span class="badge badge-primary badge-pill">75</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Gereksiz
+                    <span class="badge badge-primary badge-pill">66</span>
+                  </li>
+                </ul>
+              </div>
+              <br>
+              <h2 style="text-align: center;">KARTLAR</h2>
+              <br>
+              <div class="container">
+                <h2>Temel kart</h2>
+                <p>Sınıfla birlikte temel bir kart oluşturulur. </p>
+                <img src="9.PNG">
+                <div class="card">
+                  <div class="card-body">Temel kart</div>
+                </div>
+              </div>
+              <br>
+              <div class="container">
+                <h4> Başlık ve altbilgi</h4>
+                <p>Sınıf .card-header, karta bir başlık ekler ve .card-footersınıf, karta bir alt bilgi ekler </p>
+                <img src="10.PNG">
+                <div class="card">
+                  <div class="card-header">Birinci</div>
+                  <div class="card-body">İkinci</div> 
+                  <div class="card-footer">Son</div>
+                </div>
+              </div>
+              <br>
+              <div class="container">
+                <h4>Bağlamsal Sınıfları Olan Kartlar</h4>
+                <p>Karta bir arka plan rengi eklemek için bağlamsal sınıfları ( .bg-primary, .bg-success, .bg-info, .bg-warning, .bg-danger, .bg-secondary, .bg-darkve .bg-light</p>
+                <img src="11.PNG">
+                <div class="card">
+                  <div class="card-body">temel kart</div>
+                </div>
+                <br>
+                <div class="card bg-primary text-white">
+                  <div class="card-body">oncelikli kartı</div>
+                </div>
+                <br>
+                <div class="card bg-success text-white">
+                  <div class="card-body">basarılı kartı</div>
+                </div>
+                <br>
+                <div class="card bg-info text-white">
+                  <div class="card-body">bilgi kartı</div>
+                </div>
+                <br>
+                <div class="card bg-warning text-white">
+                  <div class="card-body">uyarı kartı</div>
+                </div>
+                <br>
+                <div class="card bg-danger text-white">
+                  <div class="card-body">tehlike kartı</div>
+                </div>
+                <br>
+                <div class="card bg-secondary text-white">
+                  <div class="card-body">ikincil kart</div>
+                </div>
+                <br>
+                <div class="card bg-dark text-white">
+                  <div class="card-body">karanlık kart</div>
+                </div>
+                <br>
+                <div class="card bg-light text-dark">
+                  <div class="card-body">aydınlık kart</div>
+                </div>
+              </div>
+              <br>
+              <div class="container">
+                <h4>Başlıklar, metin ve bağlantılar </h4>
+                <p>.card-titleHerhangi bir başlık öğesine kart başlıkları eklemek için kullanın . Sınıf .card-text, bir p öğesi içindeki son çocuksa (veya tek öğeyse) alt kenar boşluklarını kaldırmak için kullanılır .card-body. Sınıf .card-link, herhangi bir bağlantıya mavi bir renk ve üzerine gelme efekti ekler. </p>
+                <img src="11.11.PNG">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">kart başlıgı</h4>
+                    <p class="card-text"> örnek</p>
+                    <a href="#" class="card-link">kart link</a>
+                    <a href="#" class="card-link">diger  link</a>
+                  </div>
+                </div>
+              </div>
+            <br>
+           
+              
+              <h4> Kart Resmi</h4>
+              <p>Görüntüyü kartın içine veya altına yerleştirmek için veya öğesine .card-img-topekleyin . Tüm genişliğe yayılacak şekilde resmin dışına eklediğimizi unutmayın :.card-img-bottom img .card-body </p>
+              <img src="12.PNG">
+              <div class="card" style="width:400px">
+                <div class="card-body">
+                  <h4 class="card-title">Oktay AHRAS</h4>
+                  <p class="card-text">Oktay bir ögrenci</p>
+                  <a href="#" class="btn btn-primary">profile bak</a>
+                </div>
+                <img class="card-img-bottom" src="img_avatar6.png" style="width:100%">
+              </div>
+            </div>
+            <br>
+            <div class="container">
+              <h4>Kart Görüntüleme Bindirmeleri </h4>
+              <p> Kartın iç kısmına bilgi yazmak için. </p>
+              <div class="card img-fluid" style="width:500px">
+                <img class="card-img-top" src="img_avatar6.png" style="width:100%">
+                <div class="card-img-overlay">
+                  <h4 class="card-title">Bedi AHRAS</h4>
+                  <p class="card-text"> Bedi bir ögrencidir</p>
+                  <a href="#" class="btn btn-primary">See Profile</a>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="container">
+              <h4> Kart Sütunları</h4>
+              <p>Sınıf .card-columns, duvar benzeri bir kart ızgarası oluşturur (pinterest gibi). Daha fazla kart yerleştirdikçe düzen otomatik olarak ayarlanacaktır. </p>
+              <img src="13.PNG">
+              <p><strong>Not:</strong>Kartlar küçük ekranlarda dikey olarak görüntülenir</p>
+              <div class="card-columns">
+                <div class="card bg-primary">
+                  <div class="card-body text-center">
+                    <p class="card-text">İlk kartın içindeki yazı</p>
+                  </div>
+                </div>
+                <div class="card bg-warning">
+                  <div class="card-body text-center">
+                    <p class="card-text">İkinci kartın içindeki yazı</p>
+                  </div>
+                </div>
+                <div class="card bg-success">
+                  <div class="card-body text-center">
+                    <p class="card-text">Üçüncü kartın içindeki yazı</p>
+                  </div>
+                </div>
+                <div class="card bg-danger">
+                  <div class="card-body text-center">
+                    <p class="card-text">Dördüncü kartın içindeki yazı</p>
+                  </div>
+                </div>  
+                <div class="card bg-light">
+                  <div class="card-body text-center">
+                    <p class="card-text">Beşinci kartın içindeki yazı</p>
+                  </div>
+                </div>
+                <div class="card bg-info">
+                  <div class="card-body text-center">
+                    <p class="card-text">Altıncı kartın içindeki yazı</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="container">
+              <h4>kart destesi</h4>
+              <p>Sınıf , eşit yükseklik ve genişliğe.card-deck sahip bir kart ızgarası oluşturur . Daha fazla kart yerleştirdikçe düzen otomatik olarak ayarlanacaktır. </p>
+              <img src="14.PNG">
+              <p><strong>Not:</strong> Kartlar, küçük ekranlarda dikey olarak görüntüler</p>
+              <div class="card-deck">
+                <div class="card bg-primary">
+                  <div class="card-body text-center">
+                    <p class="card-text">İlk kartın içindeki yazı</p>
+                    <p class="card-text">Yüksekliği artırmak için yazı</p>
+                    <p class="card-text">Yüksekliği artırmak için yazı</p>
+                    <p class="card-text">Yüksekliği artırmak için yazı</p>
+                  </div>
+                </div>
+                <div class="card bg-warning">
+                  <div class="card-body text-center">
+                    <p class="card-text">İkinci kartın içindeki yazı</p>
+                  </div>
+                </div>
+                <div class="card bg-success">
+                  <div class="card-body text-center">
+                    <p class="card-text">ücüncü kartın içindeki yazı</p>
+                  </div>
+                </div>
+                <div class="card bg-danger">
+                  <div class="card-body text-center">
+                    <p class="card-text">dördüncü kartın içindeki yazı</p>
+                  </div>
+                </div>  
+              </div>
+            </div>
+            <br>
+            <div class="container">
+              <h4>kart gurubu</h4>
+              <p>Sınıf .card-groupbenzer .card-deck. Tek fark, .card-groupsınıfın her kart arasındaki sol ve sağ kenar boşluklarını kaldırmasıdır. </p>
+              <img src="15.PNG">
+              <p><strong>Not:</strong> Kartlar küçük ekranlarda dikey olarak görüntülenir üst ve alt kenar boşluğu</p>
+              <div class="card-group">
+                <div class="card bg-primary">
+                  <div class="card-body text-center">
+                    <p class="card-text">İlk kartın içindeki yazı</p>
+                    <p class="card-text">Yüksekliği artırmak için yazı</p>
+                    <p class="card-text">Yüksekliği artırmak için yazı</p>
+                    <p class="card-text">Yüksekliği artırmak için yazı</p>
+                  </div>
+                </div>
+                <div class="card bg-warning">
+                  <div class="card-body text-center">
+                    <p class="card-text">ikinci kartın içindeki yazı</p>
+                  </div>
+                </div>
+                <div class="card bg-success">
+                  <div class="card-body text-center">
+                    <p class="card-text">ücüncü kartın içindeki yazı</p>
+                  </div>
+                </div>
+                <div class="card bg-danger">
+                  <div class="card-body text-center">
+                    <p class="card-text">dördüncü kartın içindeki yazı</p>
+                  </div>
+                </div>  
+              </div>
+            </div>
+            </div>
+            <div class="container mt-5">
+            <div class="card mt-5" style="width: 18rem;">
+                <img src="img_avatar6.png" style="max-width: 150;" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Kart</h5>
+                  <p class="card-text">1. kart</p>
+                  <a href="#" class="btn btn-primary">kart</a>
+                </div>
+              </div>
+
+</body>
+</html>
