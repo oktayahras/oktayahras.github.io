@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"
+    type="text/css" />
+</head>
+<style>
+  /* .center{
+        text-align: center;
+        background-color: rgb(42, 43, 43);
+        color: white;
+      } */
+      xmp{
+          background-color: black;
+          color: white;
+      }
+</style>
+
+<body>
+  <h3 style="justify-content: center; display: flex;">Giriş</h3>
+  <div class="container text-center">
+    <div class="box1">
+      <p>
+        Projeye başlamak için kullancağımız platfrom React olarak seçtim şimdi react ile
+        projemizi oluştırmak
+        için
+      <pre> <code>npx create-react-app reactFlix</code></pre> komut satırını terminale yazıyoruz. ardından oluşacak
+      dosyalar
+      yan taraftaki gibi olacaktır.
+      </p>
+      <img style="width: 775px;" src="1.resims.PNG">
+      <p>
+        Asıl uygulamamız "App.js" üzerinde ve onunla bağlantılı components klasöründeki dosyalarda yazılacaktır.
+        "App.css" ise bunların çalıştıracağı css kodlarıdır.
+        "movies.json" ise veritabanı olarak kullanacığımız array'in bulunduğu dosyadır.
+      </p>
+    </div>
+    <br>
+    <div class="box2">
+      <p>App.js içinde uygulamam içinde gerekli olan CRUD işlemleri için kod scriptleri bulunuyor<br> Bunun için olarak
+        web sitemi dizayn ediyorum web dizayn ederken hepsini ayrı ayrı
+        components içnde bulunduruyorum </p>
+      <xmp class="ekleme" style="border: 4px solid black;"> <code> //ekleme
+            Addmovie = async (movie) => {
+              await axios.post(`http://localhost:3002/movies/`, movie);
+          
+              this.setState((state) => ({
+                movies: state.movies.concat([movie]),
+              }));
+              this.getMovies();
+            };</code></xmp>
+      <p>ekleme işlemi içi yukarda gördüğünüz bir fonksiyonla veritabanı local bağalntısına post işlemi gödermek
+        istiyorum nu fonskiyonu App.js içinde tanımlayıp " Add.json " scriptinde çağırıyorum</p>
+      <p> ardından add.json scripti içine fonksiyonumu çağırıyorum fonksiyon çağırma işlemi aşağıda ki gösterimdir</p>
+      
+      <div class="box2" style="border: 3px solid black; ">
+        <h2>Anime ekleme Add.js</h2>
+        <xmp>
+           import serialize from 'form-serialize';
+           import React, { Component } from 'react';
+            class Addmovie extends Component {
+            handleFormSubmit=(e)=>{
+            e.preventDefault();
+            const newMovie=serialize(e.target,{hash:true});
+            this.props.onAddMovie(newMovie)
+            }
+            render() {
+            return (
+            <div className="container">
+              <form className="mt-5" onSubmit={this.handleFormSubmit}>
+                <input className="form-control" id="disabledInput" type="text" placeholder="Fill The Form To Add A Movie.."
+                  disabled />
+                <div className="form-row">
+                  <div className="form-group col-md-10">
+                    <label htmlFor="inputName">Name</label>
+                    <input type="text" className="form-control" name="name" />
+                  </div>
+                  <div className="form-group col-md-2">
+                    <label htmlFor="inputRating">Rating</label>
+                    <input type="text" className="form-control" name="rating" />
+                  </div>
+                </div>
+                <div className="form-row">
+                  <div className="form-group col-md-12">
+                    <label htmlFor="inputImage">Image URL</label>
+                    <input type="text" className="form-control" name="imageURL" />
+                  </div>
+                </div>
+                <div className="form-row">
+                  <div className="form-group col-md-12">
+                    <label htmlFor="overviewTextarea">Overview</label>
+                    <textarea className="form-control" name="overview" rows="5"></textarea>
+                  </div>
+                </div>
+                <br></br>
+                <input type="submit" className="btn btn-danger w-100" value="Add Movie" />
+              </form>
+            </div> ) } }
+            export default Addmovie;
+            </xmp>
+      </div>
+      <div class="box3">
+        <h1>Silme işlemi delete.js</h1>
+        <p>silme işlemi için eklediğimiz her anime için card-header içinde 
+        silme butuonu ekliyoruz silme fonskiyonu aşağdaki kod scriptinde gösterdiğim gibidir.  
+        </p>
+        <xmp style="border: 3px solid black;">
+          deleteMovie = async (movie) => {
+            axios.delete(`http://localhost:3002/movies/${movie.id}`);
+            const newMovieList = this.state.movies.filter((m) => m.id !== movie.id);
+            this.setState((state) => ({
+              movies: newMovieList,
+            }));
+            this.getMovies();
+          };
+        
+        </xmp>
+        <p>
+          silme fonksiyonu veritanına bir istek dahilinde olur axos.delete olark. şimdi bunu app.js içinde nasıl çağırdğımıza bakalım.
+
+        </p>
+        <xmp style="border: 3px solid black;">
+          return ( <div className='row'>
+          
+            {props.movies.map((movie,i) => (
+            <div className='col-lg-4 ' key={i}>
+              <div className='card mb-4 shadow-sm'>
+                <img className='card-img-top' alt="sample movie" src={movie.imageURL} />
+                <div className='card-body'>
+                  <h5 className='card-title'>{movie.name}</h5>
+                  <p className='card-text'>{truncateOverview(movie.overview)}</p>
+                  <div className='d-flex justify-content-between align-items-center'>
+                    <button className='btn btn-md btn-outline-danger' onClick={(event)=>props.deleteITem(movie)}>Delete</button>
+          
+                    <Link type="button" className="btn btn-md btn-outline-warning" to={`edit/${movie.id}`}>Edit</Link>
+          
+                    <h2><span>{movie.rating}</span></h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+            ))}
+          </div>
+          )
+        </xmp>
+        <div class="box4">
+          <h3>Güncelleme işlemi "Edit.js"</h3>
+          <p>veri olarak kaydettğimiz her bir anime kaydı için güncelleme butonu koydum yani "Edit"
+            bu işlem ise components
+             dosya klasörü içinde. şimdi nasıl yapılığına bakalım öncelikle react ile state kalıbı kullanılır verileri önce "async componentDidMount() " 
+             fonskiyonu ile çağrılır ardından herbir veri id ile edit ekranına çağrılır. 
+            </p>
+            <xmp style="border: 3px solid black;">
+              class Edit extends Component{   
+    
+                state = {
+                name: "",
+                rating:"",
+                overview:"",
+                imageURL:"" }
+              
+            // gety request kullan 
+        
+            async componentDidMount() {
+                const id = this.props.match.params.id;
+                // console.log(id);
+                 const response = await axios.get(`http://localhost:3002/movies/${id}`);
+                //  console.log(response.data);
+                this.setState({
+                    name:response.data.name,
+                    rating:response.data.rating,
+                    overview:response.data.overview,
+                    imageURL:response.data.imageURL
+                })
+            }
+            // onchange
+            onInputChange = (e)=>{
+                // console.log(e.target.name);
+                this.setState({
+                    [e.target.name]: e.target.value
+                })
+            }
+            // yenileme iptali
+            handleFormSubmit = (e) => {
+                e.preventDefault();
+        
+                // güncelleme
+                const {name, rating, overview, imageURL }=this.state;
+                const id = this.props.match.params.id;
+        
+                const updateMovie={
+                    name,
+                    rating,
+                    overview,
+                    imageURL
+                }
+                this.props.onEditMovie(id,updateMovie);
+                this.props.history.push("/");
+            </xmp>
+        </div>
+        <div class="box5">
+          <h3>Arama Search.js</h3>
+          <p>
+            Filtreleme metodu ise bait bir Javascript kodu ile yaptım Bunuda App.js içinde yapıp search bar kısmına çektim.
+          </p>
+          <xmp style="border: 3px solid black;">
+            // filtreleme
+            searchMovie = (event) => {
+              this.setState({ searchQuery: event.target.value });
+            };
+            render() {
+              //filtreleme fonskiyonu
+              let filteredMovies = this.state.movies
+                .filter((movie) => {
+                  return (
+                    movie.name
+                      .toLowerCase()
+                      .indexOf(this.state.searchQuery.toLowerCase()) !== -1
+                  );
+                })
+                .sort((a, b) => {
+                  return a.id < b.id ? 1 : -1; // id seçimin tersine döndürür
+                });
+          
+          </xmp>
+
+        </div>
+      </div>
+    </div>
+    </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Core theme JS-->
+  <script src="js/scripts.js"></script>
+  <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</body>
+</html>
